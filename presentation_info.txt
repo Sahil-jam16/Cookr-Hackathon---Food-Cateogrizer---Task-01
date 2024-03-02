@@ -1,0 +1,5 @@
+1) so for finding a single target variable, does it take all the other variables in the account , i.e in the cluster does it have all the variable for prediction ?
+
+Yes, that's correct. For finding a single target variable within a cluster, the model takes into account all the other variables present in the dataset. The idea is that within a specific cluster, the relationship between the input features and the target variable might be different compared to the overall dataset. So, the model is trained using the data within that cluster to capture the specific patterns and relationships present in that subset of the data.
+
+This approach is a form of cluster-specific modeling, where models are created for different clusters to better capture the variations in data patterns within those clusters. The use of clusters helps to address the potential heterogeneity in the dataset, allowing the model to make more accurate predictions for different groups or clusters of instances.

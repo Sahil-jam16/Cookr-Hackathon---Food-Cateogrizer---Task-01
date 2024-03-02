@@ -1,0 +1,125 @@
+Name                 ,Ingredients                                       ,Diet           ,Flavor ,Protein ,Carbohydrate_Content ,Meal_Type   ,Cuisine_Type   ,Preparation_Method ,Spiciness
+Idly                 ,"(Rice flour, Urad dal)"                          ,Vegetarian     ,Plain  ,Yes     ,High                 ,Breakfast   ,South Indian   ,Steamed            ,Moderate
+Dosa                 ,"(Rice flour, Urad dal)"                          ,Vegetarian     ,Plain  ,Yes     ,Moderate             ,Breakfast   ,South Indian   ,Fried              ,High
+Vada                 ,"(Urad dal, Gram flour)"                          ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Snack       ,South Indian   ,Fried              ,High
+Poha                 ,"(Flattened rice, Peas, Spices)"                  ,Vegetarian     ,Spicy  ,No      ,High                 ,Breakfast   ,West Indian    ,Boiled             ,Moderate
+Upma                 ,"(Semolina, Vegetables, Spices)"                  ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Breakfast   ,South Indian   ,Boiled             ,Moderate
+Paratha              ,"(Wheat flour, Ghee)"                             ,Vegetarian     ,Spicy  ,No      ,High                 ,Breakfast   ,North Indian   ,Fried              ,High
+Masala Dosa          ,"(Rice flour, Urad dal, Potatoes, Spices)"        ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,South Indian   ,Fried              ,Moderate
+Chole Bhature        ,"(Chickpeas, Wheat flour, Spices)"                ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Fried              ,High
+Aloo Puri            ,"(Potatoes, Wheat flour, Spices)"                 ,Vegetarian     ,Spicy  ,No      ,High                 ,Main Course ,North Indian   ,Fried              ,High
+Biryani              ,"(Basmati rice, Chicken, Spices)"                 ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Baked              ,High
+Butter Chicken       ,"(Chicken, Cream, Spices)"                        ,Non-Vegetarian ,Creamy ,Yes     ,Moderate             ,Main Course ,North Indian   ,Fried              ,Moderate
+Rajma Chawal         ,"(Kidney beans, Rice)"                            ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Boiled             ,High
+Tandoori Roti        ,"(Wheat flour, Ghee)"                             ,Vegetarian     ,Plain  ,No      ,Moderate             ,Bread       ,North Indian   ,Baked              ,Moderate
+Palak Paneer         ,"(Spinach, Paneer, Spices)"                       ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,North Indian   ,Fried              ,Moderate
+Dal Makhani          ,"(Black lentils, Kidney beans, Cream, Spices)"    ,Vegetarian     ,Creamy ,Yes     ,Moderate             ,Main Course ,North Indian   ,Boiled             ,Moderate
+Samosa               ,"(Potatoes, Peas, Spices)"                        ,Vegetarian     ,Spicy  ,No      ,High                 ,Snack       ,North Indian   ,Fried              ,High
+Gulab Jamun          ,"(Milk solids, Sugar syrup)"                      ,Vegetarian     ,Sweet  ,No      ,High                 ,Dessert     ,North Indian   ,Fried              ,None
+Rasgulla             ,"(Paneer, Sugar syrup)"                           ,Vegetarian     ,Sweet  ,Yes     ,Moderate             ,Dessert     ,East Indian    ,Boiled             ,None
+Jalebi               ,"(All-purpose flour, Sugar syrup)"                ,Vegetarian     ,Sweet  ,No      ,High                 ,Dessert     ,North Indian   ,Fried              ,None
+Kheer                ,"(Rice, Milk, Sugar, Nuts)"                       ,Vegetarian     ,Sweet  ,Yes     ,Moderate             ,Dessert     ,North Indian   ,Boiled             ,None
+Sambhar              ,"(Toor dal, Vegetables, Tamarind, Spices)"        ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Main Course ,South Indian   ,Boiled             ,High
+Rasam                ,"(Tomato, Tamarind, Lentils, Spices)"             ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Main Course ,South Indian   ,Boiled             ,High
+Coconut Chutney      ,"(Coconut, Green chillies, Urad dal)"             ,Vegetarian     ,Mild   ,No      ,Low                  ,Side Dish   ,South Indian   ,Raw                ,Low
+Pakora               ,"(Chickpea flour, Vegetables, Spices)"            ,Vegetarian     ,Spicy  ,No      ,High                 ,Snack       ,North Indian   ,Fried              ,High
+Chaat                ,"(Potatoes, Chickpeas, Yogurt, Tamarind chutney)" ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Snack       ,North Indian   ,Assembled          ,High
+Dhokla               ,"(Gram flour, Curd, Spices)"                      ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Snack       ,West Indian    ,Steamed            ,Moderate
+Paneer Tikka         ,"(Paneer, Yogurt, Spices)"                        ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Appetizer   ,North Indian   ,Grilled            ,Moderate
+Pulao                ,"(Basmati rice, Vegetables, Spices)"              ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Main Course ,North Indian   ,Boiled             ,Moderate
+Kofta Curry          ,"(Mixed vegetables, Paneer, Spices)"              ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Fried              ,High
+Thali                ,(Assorted dishes)                                 ,Vegetarian     ,Mixed  ,Yes     ,High                 ,Main Course ,North Indian   ,Assembled          ,High
+Bhindi Masala        ,"(Okra, Spices)"                                  ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Main Course ,North Indian   ,Fried              ,Moderate
+Mysore Pak           ,"(Chickpea flour, Ghee, Sugar)"                   ,Vegetarian     ,Sweet  ,No      ,High                 ,Dessert     ,South Indian   ,Boiled             ,None
+Hyderabadi Biryani   ,"(Basmati rice, Lamb, Spices)"                    ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Main Course ,South Indian   ,Baked              ,High
+Lassi                ,"(Yogurt, Sugar, Cardamom)"                       ,Vegetarian     ,Sweet  ,No      ,High                 ,Drink       ,North Indian   ,Blended            ,High
+Roti                 ,"(Wheat flour, Water)"                            ,Vegetarian     ,Plain  ,No      ,Moderate             ,Bread       ,North Indian   ,Grilled            ,Moderate
+Tandoori Chicken     ,"(Chicken, Yogurt, Spices)"                       ,Non-Vegetarian ,Spicy  ,Yes     ,Moderate             ,Appetizer   ,North Indian   ,Grilled            ,Moderate
+Fish Curry           ,"(Fish, Coconut milk, Spices)"                    ,Non-Vegetarian ,Spicy  ,Yes     ,Moderate             ,Main Course ,South Indian   ,Boiled             ,Moderate
+Aloo Gobi            ,"(Potatoes, Cauliflower, Spices)"                 ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Main Course ,North Indian   ,Fried              ,Moderate
+Kadhi                ,"(Yogurt, Gram flour, Spices)"                    ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Boiled             ,High
+Pani Puri            ,"(Semolina balls, Potatoes, Spices)"              ,Vegetarian     ,Spicy  ,No      ,High                 ,Snack       ,North Indian   ,Assembled          ,High
+Chole                ,"(Chickpeas, Spices)"                             ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,North Indian   ,Boiled             ,Moderate
+Rava Kesari          ,"(Semolina, Ghee, Sugar)"                         ,Vegetarian     ,Sweet  ,No      ,High                 ,Dessert     ,South Indian   ,Boiled             ,None
+Akki Roti            ,"(Rice flour, Vegetables, Spices)"                ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Bread       ,South Indian   ,Grilled            ,Moderate
+Buttermilk           ,"(Yogurt, Water, Spices)"                         ,Vegetarian     ,Spicy  ,No      ,Low                  ,Drink       ,North Indian   ,Blended            ,Low
+Keema Paratha        ,"(Wheat flour, Lamb, Spices)"                     ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Breakfast   ,North Indian   ,Fried              ,High
+Paneer Butter Masala ,"(Paneer, Cream, Spices)"                         ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,North Indian   ,Fried              ,Moderate
+Dhokla               ,"(Rice flour, Chickpea flour, Curd)"              ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Snack       ,West Indian    ,Steamed            ,Moderate
+Pav Bhaji            ,"(Mixed vegetables, Spices, Bun)"                 ,Vegetarian     ,Spicy  ,No      ,High                 ,Snack       ,West Indian    ,Fried              ,High
+Goan Fish Curry      ,"(Fish, Coconut milk, Spices)"                    ,Non-Vegetarian ,Spicy  ,Yes     ,Moderate             ,Main Course ,West Indian    ,Boiled             ,Moderate
+Misal Pav            ,"(Sprouts, Spices, Bread)"                        ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Snack       ,West Indian    ,Assembled          ,High
+Fafda Jalebi         ,"(Gram flour, Jaggery, Spices)"                   ,Vegetarian     ,Sweet  ,No      ,High                 ,Snack       ,West Indian    ,Fried              ,High
+Patra                ,"(Colocasia leaves, Gram flour, Spices)"          ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Snack       ,West Indian    ,Steamed            ,Moderate
+Rajma Chawal         ,"(Kidney beans, Rice, Spices)"                    ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Boiled             ,High
+Gajar Ka Halwa       ,"(Carrots, Ghee, Sugar)"                          ,Vegetarian     ,Sweet  ,No      ,High                 ,Dessert     ,North Indian   ,Boiled             ,None
+Kulfi                ,"(Milk, Sugar, Cardamom)"                         ,Vegetarian     ,Sweet  ,No      ,High                 ,Dessert     ,North Indian   ,Frozen             ,None
+Khaman               ,"(Chickpea flour, Curd, Spices)"                  ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Breakfast   ,West Indian    ,Steamed            ,Moderate
+Kadi Pakoda          ,"(Yogurt, Gram flour, Pakoras)"                   ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Boiled             ,High
+Bhel Puri            ,"(Puffed rice, Sev, Chutneys)"                    ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Snack       ,West Indian    ,Assembled          ,Moderate
+Rasam                ,"(Tomato, Tamarind, Spices)"                      ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,South Indian   ,Boiled             ,Moderate
+Neer Dosa            ,"(Rice flour, Coconut, Water)"                    ,Vegetarian     ,Plain  ,No      ,Moderate             ,Breakfast   ,South Indian   ,Grilled            ,Moderate
+Palak Paneer         ,"(Spinach, Paneer, Spices)"                       ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,North Indian   ,Fried              ,Moderate
+Dabeli               ,"(Potato, Bun, Spices)"                           ,Vegetarian     ,Spicy  ,No      ,High                 ,Snack       ,West Indian    ,Assembled          ,High
+Pesarattu            ,"(Green gram, Rice, Ginger)"                      ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Breakfast   ,South Indian   ,Grilled            ,Moderate
+Biryani              ,"(Basmati rice, Chicken, Spices)"                 ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Baked              ,High
+Rajasthani Dal Baati ,"(Lentils, Wheat flour, Ghee)"                    ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Main Course ,West Indian    ,Grilled            ,High
+Jalebi               ,"(Maida, Sugar, Saffron)"                         ,Vegetarian     ,Sweet  ,No      ,High                 ,Dessert     ,North Indian   ,Fried              ,None
+Chana Masala         ,"(Chickpeas, Spices)"                             ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,North Indian   ,Boiled             ,Moderate
+Khichdi              ,"(Rice, Lentils, Spices)"                         ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Boiled             ,High
+Shrikhand            ,"(Yogurt, Sugar, Saffron)"                        ,Vegetarian     ,Sweet  ,No      ,Moderate             ,Dessert     ,West Indian    ,Boiled             ,None
+Kadala Curry         ,"(Black chickpeas, Coconut, Spices)"              ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,South Indian   ,Boiled             ,Moderate
+Dosa                 ,"(Rice flour, Urad dal, Water)"                   ,Vegetarian     ,Plain  ,No      ,Moderate             ,Breakfast   ,South Indian   ,Grilled            ,Moderate
+Chapati              ,"(Wheat flour, Water)"                            ,Vegetarian     ,Plain  ,No      ,Moderate             ,Bread       ,North Indian   ,Grilled            ,Moderate
+Aloo Paratha         ,"(Potatoes, Wheat flour, Ghee)"                   ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Breakfast   ,North Indian   ,Fried              ,High
+Modak                ,"(Rice flour, Coconut, Jaggery)"                  ,Vegetarian     ,Sweet  ,No      ,High                 ,Dessert     ,West Indian    ,Steamed            ,None
+Baingan Bharta       ,"(Eggplant, Spices)"                              ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Main Course ,North Indian   ,Grilled            ,Moderate
+Aloo Tikki           ,"(Potatoes, Spices)"                              ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Snack       ,North Indian   ,Fried              ,High
+Chana Chaat          ,"(Chickpeas, Onions, Tomatoes, Spices)"           ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Snack       ,North Indian   ,Assembled          ,Moderate
+Chicken Korma        ,"(Chicken, Yogurt, Cashews, Spices)"              ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Cooked             ,High
+Dhansak              ,"(Lamb, Lentils, Vegetables)"                     ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Main Course ,West Indian    ,Boiled             ,Moderate
+Egg Curry            ,"(Eggs, Onions, Tomatoes, Spices)"                ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Cooked             ,High
+Fried Fish           ,"(Fish, Spices, Gram flour)"                      ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Snack       ,West Indian    ,Fried              ,High
+Gobi Manchurian      ,"(Cauliflower, Soy sauce, Spices)"                ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Appetizer   ,Indo-Chinese   ,Fried              ,High
+Hakka Noodles        ,"(Noodles, Vegetables, Soy sauce)"                ,Vegetarian     ,Savory ,No      ,Moderate             ,Main Course ,Indo-Chinese   ,Stir-Fried         ,Moderate
+Ilish Bhapa          ,"(Hilsa fish, Mustard paste, Coconut)"            ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Main Course ,East Indian    ,Grilled            ,Moderate
+Jhalmuri             ,"(Puffed rice, Peanuts, Mustard oil)"             ,Vegetarian     ,Spicy  ,Yes     ,Low                  ,Snack       ,East Indian    ,Assembled          ,High
+Kadai Paneer         ,"(Paneer, Bell peppers, Spices)"                  ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,North Indian   ,Stir-Fried         ,Moderate
+Lemon Rice           ,"(Rice, Lemon juice, Mustard seeds)"              ,Vegetarian     ,Tangy  ,No      ,Low                  ,Main Course ,South Indian   ,Tempered           ,Moderate
+Mutton Biryani       ,"(Basmati rice, Mutton, Spices)"                  ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Baked              ,High
+Navratan Korma       ,"(Mixed vegetables, Paneer, Nuts)"                ,Vegetarian     ,Mild   ,Yes     ,Moderate             ,Main Course ,North Indian   ,Cooked             ,Moderate
+Oondhiyo             ,"(Mixed vegetables, Fenugreek dumplings)"         ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,West Indian    ,Cooked             ,Moderate
+Prawn Curry          ,"(Prawns, Coconut milk, Spices)"                  ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Main Course ,Coastal Indian ,Boiled             ,Moderate
+Qeema Paratha        ,"(Wheat flour, Minced meat, Spices)"              ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Breakfast   ,North Indian   ,Fried              ,High
+Raj Kachori          ,"(Semolina, Moong dal, Chutneys)"                 ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Snack       ,North Indian   ,Deep-Fried         ,High
+Schezwan Fried Rice  ,"(Rice, Vegetables, Schezwan sauce)"              ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,Indo-Chinese   ,Stir-Fried         ,Moderate
+Tandoori Fish Tikka  ,"(Fish, Yogurt, Spices)"                          ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Appetizer   ,North Indian   ,Grilled            ,Moderate
+Undhiyu              ,"(Mixed vegetables, Fenugreek dumplings)"         ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,West Indian    ,Cooked             ,Moderate
+Veg Biryani          ,"(Basmati rice, Mixed vegetables, Spices)"        ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,North Indian   ,Baked              ,High
+Wheat Halwa          ,"(Wheat flour, Ghee, Sugar)"                      ,Vegetarian     ,Sweet  ,No      ,High                 ,Dessert     ,North Indian   ,Cooked             ,None
+Yakhni Pulao         ,"(Rice, Mutton, Yakhni broth)"                    ,Non-Vegetarian ,Mild   ,Yes     ,Moderate             ,Main Course ,North Indian   ,Boiled             ,Moderate
+Zunka Bhakar         ,"(Besan, Jowar flour, Spices)"                    ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,West Indian    ,Cooked             ,Moderate
+Bhutte Ka Kees       ,"(Corn, Milk, Spices)"                            ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,North Indian   ,Cooked             ,Moderate
+Dahi Puri            ,"(Semolina balls, Potatoes, Yogurt)"              ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Snack       ,West Indian    ,Assembled          ,High
+Egg Bhurji           ,"(Eggs, Onions, Tomatoes, Spices)"                ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Scrambled          ,High
+Fenugreek Paratha    ,"(Wheat flour, Fenugreek leaves)"                 ,Vegetarian     ,Spicy  ,No      ,Moderate             ,Breakfast   ,North Indian   ,Fried              ,High
+Gatte Ki Sabzi       ,"(Gram flour, Yogurt, Spices)"                    ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,North Indian   ,Cooked             ,Moderate
+Hariyali Chicken     ,"(Chicken, Mint, Coriander, Spices)"              ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Grilled            ,Moderate
+Imarti               ,"(Urad dal, Sugar syrup)"                         ,Vegetarian     ,Sweet  ,No      ,High                 ,Dessert     ,North Indian   ,Deep-Fried         ,None
+Jalebi with Rabri    ,"(Maida, Sugar syrup, Rabri)"                     ,Vegetarian     ,Sweet  ,No      ,High                 ,Dessert     ,North Indian   ,Deep-Fried         ,None
+Kalaadi              ,"(Local cheese, Spices)"                          ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Snack       ,South Indian   ,Fried              ,Moderate
+Lauki Kofta          ,"(Bottle gourd, Gram flour, Spices)"              ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,North Indian   ,Fried              ,High
+Mango Lassi          ,"(Mango, Yogurt, Sugar)"                          ,Vegetarian     ,Sweet  ,Yes     ,Moderate             ,Drink       ,North Indian   ,Blended            ,High
+Nihari               ,"(Beef, Spices)"                                  ,Non-Vegetarian ,Spicy  ,Yes     ,High                 ,Main Course ,North Indian   ,Slow-Cooked        ,Moderate
+Onion Uttapam        ,"(Rice flour, Urad dal, Onions)"                  ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Breakfast   ,South Indian   ,Grilled            ,Moderate
+Paneer Pakora        ,"(Paneer, Chickpea flour, Spices)"                ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Snack       ,North Indian   ,Fried              ,High
+Quick Rava Idli      ,"(Semolina, Yogurt, Mustard seeds)"               ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Breakfast   ,South Indian   ,Steamed            ,Moderate
+Rajasthani Kadhi     ,"(Yogurt, Besan, Spices)"                         ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,West Indian    ,Boiled             ,Moderate
+Sarson Ka Saag       ,"(Mustard greens, Spinach, Spices)"               ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,North Indian   ,Cooked             ,Moderate
+Til Chikki           ,"(Sesame seeds, Jaggery)"                         ,Vegetarian     ,Sweet  ,No      ,High                 ,Snack       ,North Indian   ,Cooked             ,High
+Urad Dal Kachori     ,"(Urad dal, Flour, Spices)"                       ,Vegetarian     ,Spicy  ,Yes     ,High                 ,Snack       ,North Indian   ,Deep-Fried         ,High
+Vangi Bhath          ,"(Eggplant, Rice, Spices)"                        ,Vegetarian     ,Spicy  ,Yes     ,Moderate             ,Main Course ,South Indian   ,Tempered           ,Moderate
+Wheat Sheera         ,"(Wheat flour, Ghee, Sugar)"                      ,Vegetarian     ,Sweet  ,No      ,High                 ,Dessert     ,North Indian   ,Cooked             ,None
+X-Mas Cake           ,"(Flour, Eggs, Dry fruits)"                       ,Vegetarian     ,Sweet  ,Yes     ,Moderate             ,Dessert     ,North Indian   ,Baked              ,None
+Yogurt Sandwich      ,"(Yogurt, Bread, Vegetables)"                     ,Vegetarian     ,Mild   ,Yes     ,Moderate             ,Snack       ,North Indian   ,Assembled          ,Low
+Zafrani Pulao        ,"(Basmati rice, Saffron, Dry fruits)"             ,Vegetarian     ,Mild   ,No      ,Moderate             ,Main Course ,North Indian   ,Boiled             ,Moderate

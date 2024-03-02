@@ -1,0 +1,300 @@
+Multi Class Classification with Neural Networks
+
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import accuracy_score
+
+# Assume 'df' is your DataFrame containing the dataset
+
+# Preprocess categorical variables
+label_encoders = {}
+categorical_cols = ["Diet", "Flavor", "Meal_Type", "Cuisine_Type", "Preparation_Method", "Spiciness"]
+for col in categorical_cols:
+    label_encoders[col] = LabelEncoder()
+    df[col] = label_encoders[col].fit_transform(df[col])
+
+# Train-Test Split
+train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
+
+# Define the model
+class MultiClassFoodModel(nn.Module):
+    def __init__(self, num_cuisine_classes, num_protein_classes, num_prep_method_classes, num_region_classes, num_diet_classes):
+        super(MultiClassFoodModel, self).__init__()
+        # Define your model architecture
+        # Include layers for text processing (e.g., using embeddings) and categorical feature processing
+
+        # Example:
+        # Embedding layer for text data
+        self.embedding_layer = nn.EmbeddingBag(num_embeddings=VOCAB_SIZE, embedding_dim=EMBEDDING_DIM)
+
+        # Fully connected layers for categorical features
+        self.fc_cuisine = nn.Linear(INPUT_DIM_CUISINE, num_cuisine_classes)
+        self.fc_protein = nn.Linear(INPUT_DIM_PROTEIN, num_protein_classes)
+        self.fc_prep_method = nn.Linear(INPUT_DIM_PREP_METHOD, num_prep_method_classes)
+        self.fc_region = nn.Linear(INPUT_DIM_REGION, num_region_classes)
+        self.fc_diet = nn.Linear(INPUT_DIM_DIET, num_diet_classes)
+
+    def forward(self, text_input, categorical_input):
+        # Process text input (ingredients and dish name)
+        text_output = self.embedding_layer(text_input)
+
+        # Process categorical features
+        cuisine_output = self.fc_cuisine(categorical_input["Cuisine_Type"])
+        protein_output = self.fc_protein(categorical_input["Protein"])
+        prep_method_output = self.fc_prep_method(categorical_input["Preparation_Method"])
+        region_output = self.fc_region(categorical_input["Region"])
+        diet_output = self.fc_diet(categorical_input["Diet"])
+
+        return {
+            "Cuisine_Type": cuisine_output,
+            "Protein": protein_output,
+            "Preparation_Method": prep_method_output,
+            "Region": region_output,
+            "Diet": diet_output,
+        }
+
+# Instantiate the model
+num_cuisine_classes = len(df["Cuisine_Type"].unique())
+num_protein_classes = len(df["Protein"].unique())
+num_prep_method_classes = len(df["Preparation_Method"].unique())
+num_region_classes = len(df["Region"].unique())
+num_diet_classes = len(df["Diet"].unique())
+
+model = MultiClassFoodModel(
+    num_cuisine_classes,
+    num_protein_classes,
+    num_prep_method_classes,
+    num_region_classes,
+    num_diet_classes
+)
+
+# Define loss function and optimizer
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+# Training loop
+num_epochs = 10
+for epoch in range(num_epochs):
+    for batch in train_loader:
+        # Extract text and categorical inputs along with labels
+        text_input, categorical_input, labels = batch
+
+        # Zero gradients
+        optimizer.zero_grad()
+
+        # Forward pass
+        outputs = model(text_input, categorical_input)
+
+        # Calculate loss for each output
+        loss = sum(criterion(outputs[key], labels[key]) for key in outputs)
+
+        # Backward pass and optimization
+        loss.backward()
+        optimizer.step()
+
+# Model evaluation on the test set
+model.eval()
+with torch.no_grad():
+    for batch in test_loader:
+        text_input, categorical_input, labels = batch
+        outputs = model(text_input, categorical_input)
+        # Calculate metrics for each output and evaluate the model
+
+# Inference on new data
+new_data = {
+    "Name": "New Dish",
+    "Ingredients": "(New ingredients)",
+    "Diet": "Vegetarian",
+    "Flavor": "Spicy",
+    "Meal_Type": "Lunch",
+    "Cuisine_Type": "Indian",
+    "Preparation_Method": "Fried",
+    "Spiciness": "High"
+}
+
+# Preprocess new data
+# ...
+
+# Use the trained model for prediction
+model.eval()
+with torch.no_grad():
+    # Prepare input tensors for the model
+    # ...
+
+    # Forward pass
+    predictions = model(text_input, categorical_input)
+
+    # Decode the predicted classes (if label encoding was used)
+    decoded_predictions = {
+        key: label_encoders[key].inverse_transform([torch.argmax(predictions[key], dim=1).item()])[0]
+        for key in predictions
+    }
+
+print("Predicted Categories:")
+for key, value in decoded_predictions.items():
+    print(f"{key}: {value}")
+
+
+---------------------------------------------------------------------
+
+More Content Code 
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import accuracy_score
+from torch.utils.data import DataLoader, TensorDataset
+
+# Assume 'df' is your DataFrame containing the dataset
+
+# Preprocess categorical variables
+label_encoders = {}
+categorical_cols = ["Diet", "Flavor", "Meal_Type", "Cuisine_Type", "Preparation_Method", "Spiciness"]
+for col in categorical_cols:
+    label_encoders[col] = LabelEncoder()
+    df[col] = label_encoders[col].fit_transform(df[col])
+
+# Train-Test Split
+train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
+
+# Define the model
+class MultiClassFoodModel(nn.Module):
+    def __init__(self, num_classes_dict):
+        super(MultiClassFoodModel, self).__init__()
+        # Define your model architecture
+        # Include layers for text processing (e.g., using embeddings) and categorical feature processing
+
+        # Example:
+        # Embedding layer for text data
+        self.embedding_layer = nn.EmbeddingBag(num_embeddings=VOCAB_SIZE, embedding_dim=EMBEDDING_DIM)
+
+        # Fully connected layers for each categorical feature
+        self.fc_dict = nn.ModuleDict({
+            feature: nn.Linear(INPUT_DIM, num_classes)
+            for feature, num_classes in num_classes_dict.items()
+        })
+
+    def forward(self, text_input, categorical_input):
+        # Process text input (ingredients and dish name)
+        text_output = self.embedding_layer(text_input)
+
+        # Process each categorical feature
+        categorical_outputs = {
+            feature: fc_layer(categorical_input[feature])
+            for feature, fc_layer in self.fc_dict.items()
+        }
+
+        return categorical_outputs
+
+# Instantiate the model
+num_classes_dict = {
+    "Cuisine_Type": num_cuisine_classes,
+    "Protein": num_protein_classes,
+    "Preparation_Method": num_prep_method_classes,
+    "Region": num_region_classes,
+    "Diet": num_diet_classes,
+}
+
+model = MultiClassFoodModel(num_classes_dict)
+
+# Define loss function and optimizer
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+# Convert DataFrame to PyTorch Dataset and DataLoader
+class FoodDataset(torch.utils.data.Dataset):
+    def __init__(self, df, text_field, categorical_fields, label_fields):
+        self.text_data = torch.tensor(df[text_field].values, dtype=torch.long)
+        self.categorical_data = {col: torch.tensor(df[col].values, dtype=torch.long) for col in categorical_fields}
+        self.labels = {col: torch.tensor(df[col].values, dtype=torch.long) for col in label_fields}
+
+    def __len__(self):
+        return len(self.text_data)
+
+    def __getitem__(self, idx):
+        return self.text_data[idx], {col: self.categorical_data[col][idx] for col in self.categorical_data}, {col: self.labels[col][idx] for col in self.labels}
+
+train_dataset = FoodDataset(train_df, text_field="Ingredients", categorical_fields=categorical_cols, label_fields=num_classes_dict)
+test_dataset = FoodDataset(test_df, text_field="Ingredients", categorical_fields=categorical_cols, label_fields=num_classes_dict)
+
+train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
+
+# Training loop
+num_epochs = 10
+for epoch in range(num_epochs):
+    model.train()
+    for batch in train_loader:
+        # Extract text and categorical inputs along with labels
+        text_input, categorical_input, labels = batch
+
+        # Zero gradients
+        optimizer.zero_grad()
+
+        # Forward pass
+        outputs = model(text_input, categorical_input)
+
+        # Calculate loss for each output
+        loss = sum(criterion(outputs[key], labels[key]) for key in outputs)
+
+        # Backward pass and optimization
+        loss.backward()
+        optimizer.step()
+
+# Model evaluation on the test set
+model.eval()
+all_predictions = {key: [] for key in num_classes_dict}
+all_labels = {key: [] for key in num_classes_dict}
+
+with torch.no_grad():
+    for batch in test_loader:
+        text_input, categorical_input, labels = batch
+        outputs = model(text_input, categorical_input)
+
+        # Collect predictions and labels for each output
+        for key in num_classes_dict:
+            all_predictions[key].extend(torch.argmax(outputs[key], dim=1).cpu().numpy())
+            all_labels[key].extend(labels[key].cpu().numpy())
+
+# Calculate accuracy for each output
+for key in num_classes_dict:
+    accuracy = accuracy_score(all_labels[key], all_predictions[key])
+    print(f'Test Accuracy ({key}): {accuracy * 100:.2f}%')
+
+# Inference on new data
+new_data = {
+    "Name": "New Dish",
+    "Ingredients": "(New ingredients)",
+    "Diet": "Vegetarian",
+    "Flavor": "Spicy",
+    "Meal_Type": "Lunch",
+    "Cuisine_Type": "Indian",
+    "Preparation_Method": "Fried",
+    "Spiciness": "High"
+}
+
+# Preprocess new data (similar to training data preprocessing)
+
+# Use the trained model for prediction
+model.eval()
+with torch.no_grad():
+    # Prepare input tensors for the model (similar to training data input preparation)
+    text_input, categorical_input = preprocess_new_data(new_data)
+
+    # Forward pass
+    predictions = model(text_input, categorical_input)
+
+    # Decode the predicted classes (if label encoding was used)
+    decoded_predictions = {
+        key: label_encoders[key].inverse_transform([torch.argmax(predictions[key], dim=1).item()])[0]
+        for key in predictions
+    }
+
+print("Predicted Categories:")
+for key, value in decoded_predictions.items():
+    print(f"{key}: {value}")
+----------------------------------------

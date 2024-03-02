@@ -1,0 +1,171 @@
+Cuisine Type:
+South Indian
+North Indian
+East Indian
+West Indian
+
+Meal Type:
+Breakfast
+Lunch
+Dinner
+Dessert
+Snack
+
+Dish Type:
+Vegetarian
+Non-Vegetarian
+Vegan
+
+Preparation Method:
+Baked
+Fried
+Boiled
+Grilled
+Steamed
+
+Dietary Restrictions:
+Diabetic Friendly
+Protein Rich
+Pregnancy Friendly
+
+Ingredient Base:
+Rice-based
+Wheat-based
+Millet-based
+Lentil-based
+
+Flavor Profile:
+Spicy
+Mild
+Sweet
+Savory
+
+Region:
+South India
+North India
+East India
+West India
+
+Carbohydrate Content:
+Low Carb
+Moderate Carb
+High Carb
+
+Cooking Time:
+Quick (< 30 mins)
+Moderate (30-60 mins)
+Long (> 60 mins)
+
+
+
+------------------------------
+
+multiple attributes for each food item, and you should create a model to categorize the items into various classes or categories for several target variables like "Meal_Type," "Cuisine_Type," and "Health_Benefits."
+
+Here's a suggested approach:
+
+Attributes:
+Features (Attributes):
+Ingredients(This is a string tuple which can more than one string values)
+Diet
+Flavor
+Protein Content
+Carbohydrate Content
+Meal Type
+Cuisine Type
+Preparation Method
+Health_Benefits(This is a string tuple which can more than one string values)
+
+Target Variables:
+Meal Type: Categories like Breakfast, Main Course, Snack, Dessert, etc.
+Cuisine Type: Categories like South Indian, North Indian, West Indian, etc.
+Health Benefits: Categories like High Fiber, Diabetic Friendly, Gluten-Free, Bone Health, Pregnancy Friendly, Immune Boosting.
+
+Modeling Approach:
+Data Preprocessing:
+Encode categorical variables (e.g., Diet, Flavor) into numerical format using techniques like one-hot encoding.
+And carefully apply the correct preprocessing for the ingredients and health_benefits which will be used for training the model, 
+Handle missing values if any.
+Convert text-based ingredients into a format suitable for analysis.
+
+Data Splitting:
+Split the dataset into training and testing sets. Also for training the data you should consider the ingredients, flavour, Diet Carbohydrate content column im saying this because you have left those columns when tryin to solve this in the previous prompts
+
+Random Forest Model:
+Use a Random Forest algorithm for multi-class classification.
+Each target variable (Meal Type, Cuisine Type, Health Benefits) will be treated as a separate classification task.
+Train three separate Random Forest models, one for each target variable.
+
+Handling New Dishes:
+When a new dish is introduced:
+Extract relevant attributes (Ingredients, Diet, Flavor, Carbhohydrate_Content, Protein).
+Use the trained models to predict the values for each target variable.
+The model should provide predictions for Meal Type, Cuisine Type, and Health Benefits based on the input attributes.
+Ensemble of Models:
+
+Combine the predictions from the three models to generate a comprehensive categorization for the new dish and try to print out the output for the new dish's categorization.
+
+
+--------------------------------------------------------------------
+Extra dataset
+------
+Pani Puri,"(Semolina balls, Potatoes, Spices)",Vegetarian,Spicy,No,High,Snack,North Indian,Assembled,"('None')"
+Chapati,"(Wheat flour, Water)",Vegetarian,Plain,No,Moderate,Bread,North Indian,Grilled,"('High Fiber',)"
+Mushroom Biryani,"(Basmati rice, Mushroom, Spices)",Vegetarian,Spicy,Yes,Moderate,Main Course,North Indian,Baked,"('Protein Rich',)"
+Chicken Korma,"(Chicken, Yogurt, Cashews, Spices)",Non-Vegetarian,Creamy,Yes,Moderate,Main Course,North Indian,Fried,"('Bone Health', 'Protein Rich')"
+Vegetable Hakka Noodles,"(Noodles, Mixed Vegetables, Soy Sauce)",Vegetarian,Spicy,Yes,Moderate,Main Course,Indo-Chinese,Stir-Fried,"('High Fiber',)"
+Fruit Salad,"(Mixed Fruits, Honey)",Vegetarian,Sweet,No,High,Side Dish,Indian,Raw,"('Pregnancy Friendly','Immunity Boosting')"
+Tomato Basil Pasta,"(Pasta, Tomato, Basil, Olive Oil)",Vegetarian,Spicy,No,Moderate,Main Course,Indian,Boiled,"('High Fiber',)"
+Chicken Curry,"(Chicken, Onion, Tomato, Spices)",Non-Vegetarian,Spicy,Yes,Moderate,Main Course,Indian,Fried,"('Bone Health', 'Protein Rich')"
+Gulab Jamun,"(Milk solids, Sugar syrup)",Vegetarian,Sweet,No,High,Dessert,Indian,Fried,"('None')"
+Mango Lassi,"(Mango, Yogurt, Sugar)",Vegetarian,Sweet,No,Moderate,Drink,Indian,Blended,"('Bone Health',)"
+Spinach Dal,"(Spinach, Toor Dal, Spices)",Vegetarian,Spicy,Yes,High,Main Course,Indian,Boiled,"('High Fiber',)"
+Aloo Matar,"(Potatoes, Peas, Spices)",Vegetarian,Spicy,No,High,Main Course,North Indian,Fried,"('High Fiber',)"
+Pav Bhaji,"(Mixed Vegetables, Spices, Butter)",Vegetarian,Spicy,Yes,Moderate,Snack,West Indian,Fried,"('High Fiber',)"
+Chicken Biryani,"(Basmati rice, Chicken, Spices)",Non-Vegetarian,Spicy,Yes,High,Main Course,North Indian,Baked,"('Bone Health', 'Protein Rich')"
+Vegetable Pulao,"(Basmati rice, Mixed Vegetables, Spices)",Vegetarian,Spicy,No,Moderate,Main Course,North Indian,Boiled,"('High Fiber',)"
+Dhansak,"(Lentils, Meat, Spices)",Non-Vegetarian,Spicy,Yes,High,Main Course,Parsi,Stewed,"('Bone Health', 'Protein Rich')"
+Rava Dosa,"(Semolina, Rice flour, Yogurt, Spices)",Vegetarian,Plain,Yes,Moderate,Breakfast,South Indian,Fried,"('High Fiber', 'Diabetic Friendly', 'Protein Rich')"
+Butter Naan,"(All-purpose flour, Yogurt, Butter)",Vegetarian,Plain,No,High,Bread,North Indian,Baked,"('None')"
+Malai Kofta,"(Mixed Vegetables, Paneer, Cashews, Cream)",Vegetarian,Creamy,Yes,Moderate,Main Course,North Indian,Fried,"('Bone Health', 'Protein Rich')"
+Baingan Bharta,"(Eggplant, Tomato, Onion, Spices)",Vegetarian,Spicy,No,Moderate,Main Course,North Indian,Grilled,"('High Fiber',)"
+Chana Masala,"(Chickpeas, Tomato, Onion, Spices)",Vegetarian,Spicy,Yes,High,Main Course,North Indian,Boiled,"('Bone Health', 'Protein Rich')"
+Quinoa Upma,"(Quinoa, Vegetables, Spices)",Vegetarian,Spicy,Yes,High,Breakfast,South Indian,Boiled,"('Pregnancy Friendly', 'Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Mixed Lentil Soup,"(Assorted Lentils, Vegetables, Spices)",Vegetarian,Spicy,Yes,High,Soup,Indian,Boiled,"('Pregnancy Friendly', 'Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Beetroot Tikki,"(Beetroot, Chickpea flour, Spices)",Vegetarian,Spicy,Yes,Moderate,Snack,North Indian,Fried,"('Pregnancy Friendly', 'Immunity Boosting', 'High Fiber',)"
+Oats Idly,"(Oats, Urad dal, Vegetables)",Vegetarian,Plain,Yes,High,Breakfast,South Indian,Steamed,"('Pregnancy Friendly', 'Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Sprouts Chaat,"(Mixed Sprouts, Onion, Tomato, Spices)",Vegetarian,Spicy,Yes,High,Snack,North Indian,Assembled,"('Pregnancy Friendly', 'Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Carrot and Ginger Soup,"(Carrot, Ginger, Onion, Spices)",Vegetarian,Spicy,Yes,Low,Soup,Indian,Boiled,"('Pregnancy Friendly', 'Immunity Boosting', 'High Fiber',)"
+Spinach and Almond Smoothie,"(Spinach, Almonds, Banana, Yogurt)",Vegetarian,Sweet,Yes,Moderate,Drink,Indian,Blended,"('Pregnancy Friendly', 'Immunity Boosting', 'Bone Health')"
+Coconut Quinoa Curry,"(Quinoa, Coconut Milk, Vegetables, Spices)",Vegetarian,Spicy,Yes,High,Main Course,South Indian,Boiled,"('Pregnancy Friendly', 'Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Sweet Potato and Chickpea Curry,"(Sweet Potato, Chickpeas, Coconut Milk)",Vegetarian,Spicy,Yes,Moderate,Main Course,Indian,Boiled,"('Pregnancy Friendly', 'Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Cumin Spiced Brown Rice,"(Brown Rice, Cumin Seeds, Ghee)",Vegetarian,Spicy,Yes,Moderate,Side Dish,Indian,Boiled,"('Pregnancy Friendly', 'Immunity Boosting', 'High Fiber',)"
+Pomegranate Raita,"(Yogurt, Pomegranate Seeds, Cumin)",Vegetarian,Mild,Yes,Moderate,Side Dish,Indian,Assembled,"('Pregnancy Friendly', 'Immunity Boosting', 'Bone Health')"
+Vegetable Quinoa Biryani,"(Quinoa, Mixed Vegetables, Spices)",Vegetarian,Spicy,Yes,High,Main Course,Indian,Baked,"('Pregnancy Friendly', 'Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Turmeric Milk,"(Milk, Turmeric, Honey)",Vegetarian,Sweet,Yes,Moderate,Drink,Indian,Boiled,"('Pregnancy Friendly', 'Immunity Boosting', 'Bone Health')"
+Broccoli and Tofu Stir-Fry,"(Broccoli, Tofu, Soy Sauce, Garlic)",Vegetarian,Spicy,Yes,High,Main Course,Indo-Chinese,Stir-Fried,"('Pregnancy Friendly', 'Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Green Moong Dal Soup,"(Green Moong Dal, Vegetables, Spices)",Vegetarian,Spicy,Yes,High,Soup,Indian,Boiled,"('Pregnancy Friendly', 'Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Name,Ingredients,Diet,Flavor,Protein,Carbohydrate_Content,Meal_Type,Cuisine_Type,Preparation_Method,Health_Benefits
+Aamras Puri,"(Mango Pulp, Wheat flour, Ghee)",Vegetarian,Sweet,No,High,Main Course,Indian,Fried,"('Pregnancy Friendly', 'Immunity Boosting', 'Bone Health')"
+Baingan Bharta,"(Eggplant, Tomatoes, Onions, Spices)",Vegetarian,Spicy,Yes,Moderate,Main Course,Indian,Grilled,"('Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Besan Ladoo,"(Chickpea flour, Ghee, Sugar)",Vegetarian,Sweet,Yes,High,Dessert,Indian,Fried,"('Pregnancy Friendly', 'Bone Health')"
+Dhansak,"(Lentils, Vegetables, Spices)",Vegetarian,Spicy,Yes,High,Main Course,Indian,Boiled,"('Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Jeera Rice,"(Basmati Rice, Cumin Seeds, Ghee)",Vegetarian,Plain,No,Moderate,Main Course,Indian,Boiled,"('Bone Health')"
+Kalaadi,"(Kalaadi Cheese, Spices)",Vegetarian,Spicy,Yes,High,Snack,Indian,Grilled,"('Bone Health', 'Protein Rich')"
+Karela Sabzi,"(Bitter Gourd, Onions, Spices)",Vegetarian,Spicy,Yes,Low,Main Course,Indian,Stir-Fried,"('Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Kheema Pav,"(Minced Meat, Pav Bread, Spices)",Non-Vegetarian,Spicy,Yes,High,Main Course,Indian,Fried,"('Protein Rich')"
+Kulfi,"(Milk, Condensed Milk, Nuts)",Vegetarian,Sweet,Yes,High,Dessert,Indian,Frozen,"('Bone Health', 'Protein Rich')"
+Lauki Kofta,"(Bottle Gourd, Gram Flour, Spices)",Vegetarian,Spicy,Yes,High,Main Course,Indian,Fried,"('Bone Health', 'Protein Rich')"
+Methi Thepla,"(Whole Wheat Flour, Fenugreek Leaves, Spices)",Vegetarian,Spicy,Yes,Moderate,Bread,Indian,Roasted,"('Immunity Boosting', 'High Fiber', 'Protein Rich')"
+Nihari,"(Mutton, Wheat Flour, Spices)",Non-Vegetarian,Spicy,Yes,High,Main Course,Indian,Boiled,"('Bone Health', 'Protein Rich')"
+Papri Chaat,"(Flour Crisps, Potatoes, Yogurt, Tamarind Chutney)",Vegetarian,Spicy,No,High,Snack,Indian,Assembled,"('None')"
+Raj Kachori,"(Semolina Balls, Potatoes, Lentils, Chutneys)",Vegetarian,Spicy,Yes,High,Snack,Indian,Deep Fried,"('None')"
+Sheer Khurma,"(Vermicelli, Milk, Dry Fruits)",Vegetarian,Sweet,Yes,High,Dessert,Indian,Boiled,"('Bone Health', 'Protein Rich')"
+Tandoori Fish Tikka,"(Fish, Yogurt, Spices)",Non-Vegetarian,Spicy,Yes,High,Appetizer,Indian,Grilled,"('Bone Health', 'Protein Rich')"
+Undhiyu,"(Mixed Vegetables, Fenugreek Dumplings, Spices)",Vegetarian,Spicy,Yes,High,Main Course,Indian,Boiled,"('Bone Health', 'Protein Rich')"
+Vangi Bath,"(Eggplant, Rice, Spices)",Vegetarian,Spicy,Yes,Moderate,Main Course,Indian,Boiled,"('Bone Health')"
+Wheat Halwa,"(Wheat Flour, Ghee, Sugar)",Vegetarian,Sweet,Yes,High,Dessert,Indian,Fried,"('Bone Health', 'Protein Rich')"
+Xacuti,"(Chicken, Coconut, Spices)",Non-Vegetarian,Spicy,Yes,High,Main Course,Indian,Boiled,"('Bone Health', 'Protein Rich')"
+Yakhni Pulao,"(Meat, Basmati Rice, Yakhni Broth)",Non-Vegetarian,Spicy,Yes,High,Main Course,Indian,Boiled,"('Bone Health', 'Protein Rich')"
+Zarda Rice,"(Basmati Rice, Sugar, Dry Fruits)",Vegetarian,Sweet,No,High,Main Course,Indian,Boiled,"('Bone Health')"
+Appam,"(Rice Flour, Coconut Milk, Yeast)",Vegetarian,Plain,Yes,Moderate,Breakfast,South Indian,Steamed,"('High Fiber', 'Protein Rich')"
